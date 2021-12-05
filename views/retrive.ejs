@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OverWatch</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            word-wrap: anywhere;
+            width: 1325px;
+        }
+        th {
+            background: #009879;
+            color: white;
+            text-align: left;
+            font-weight: bold;
+            padding: 12px 15px;
+        }
+        td {
+            padding: 12px 15px;
+        }
+        tr {
+            border-bottom: 1px solid grey;
+        }
+        tr:nth-of-type(even){
+            background: #f3f3f3;
+        }
+        tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .ip{
+            width: 12%;
+        }
+        .cookie{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+hiiiii this file will work later
+<table>
+    <tr>
+        <th class="ip">Source IP</th>
+<!--        <th class="ip">Dest IP</th>-->
+        <th class="cookie">Cookie</th>
+        <th class="hdr">Full Request</th>
+    </tr>
+
+    <%data.forEach((x)=>{%>
+        <tr>
+            <td class="ip"><%= x.src %></td>
+<!--            <td class="ip"><%= x.dest%></td>-->
+            <td class="cookie"><%= x.cookie%></td>
+            <td class="hdr"><%= x.hdrs%></td>
+        </tr>
+    <%})%>
+
+</table>
+
+</body>
+</html>
